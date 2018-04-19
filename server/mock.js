@@ -1,7 +1,7 @@
 const Mock = require('mockjs')
 const { Random } = Mock
 const fs = require('fs')
-// let arr = ['家乡味道', '进口食品', '牛奶乳品', '休闲零食', '生鲜果蔬', '米面粮油', '调味调料', '酒水饮料'];
+// let arr = ['家乡味道', '进口食品', '牛奶乳品', '休闲零食','生鲜果蔬','米面粮油','调味调料','酒水饮料'];
 // Random.extend({
 //     mealType:()=>{
 //         let item = Random.pick(arr);
