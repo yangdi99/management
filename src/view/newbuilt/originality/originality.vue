@@ -17,7 +17,7 @@
       <h4>上传创意</h4>
       <el-tabs v-model="activeName" @tab-click="handleClick">
         <el-tab-pane label="创意1" name="first">
-          <el-upload class="avatar-uploader" action="https://jsonplaceholder.typicode.com/posts/" :show-file-list="false" :on-success="handleAvatarSuccess" :before-upload="beforeAvatarUpload">
+          <el-upload class="avatar-uploader" action="http://localhost:9090/dsp-creative/creative/upload" :show-file-list="false" :on-success="handleAvatarSuccess" :before-upload="beforeAvatarUpload">
             <img v-if="imageUrl" :src="imageUrl" class="avatar">
             <i v-else class="el-icon-plus avatar-uploader-icon"></i>
           </el-upload>
@@ -89,7 +89,7 @@ export default {
       console.log(tab, event)
     },
     handleAvatarSuccess (res, file) {
-      this.imageUrl = URL.createObjectURL(file.raw)
+      this.imageUrl = 'http://localhost:9090/' + res.data.value
     },
     beforeAvatarUpload (file) {
       const isJPG = file.type === 'image/jpeg'
